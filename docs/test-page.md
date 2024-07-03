@@ -1,5 +1,7 @@
+---
 layout: page
 title: "test-page"
-permalink: https://theflash-17.github.io/test-page
+permalink: /test-page/
+---
 
 # This is test page.
