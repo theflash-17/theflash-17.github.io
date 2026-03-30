@@ -4,35 +4,45 @@ body.dark {
 }
 
 body.light {
-  background: #f7f8fb;
-  color: #111;
+  background: #f4f6fb;
+  color: #111827;
 }
 
-.glass {
+/* Glass — dark mode */
+body.dark .glass {
   background: linear-gradient(
     135deg,
-    rgba(255,255,255,0.12),
-    rgba(255,255,255,0.04)
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
   );
   backdrop-filter: blur(var(--blur));
   -webkit-backdrop-filter: blur(var(--blur));
-  border: 1px solid rgba(255,255,255,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.card.glass:hover {
-  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+body.dark .glass:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
-/* Liquid accent (for loaders / highlights) */
-.liquid-bar {
-  height: 8px;
-  border-radius: 10px;
-  background: radial-gradient(circle at 30%, #9ad7ff, #2563eb);
-  filter: blur(3px);
-  animation: liquid 1.5s infinite alternate;
+/* Glass — light mode */
+body.light .glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.45)
+  );
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-@keyframes liquid {
-  from { background-position: 0% }
-  to { background-position: 100% }
+body.light .glass:hover {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Tags — light mode */
+body.light .tags span {
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #374151;
 }

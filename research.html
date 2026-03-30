@@ -1,22 +1,47 @@
-<main>
-  <h1>Research</h1>
-  <div class="liquid-bar"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research | Shreyansh Narayan</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+</head>
+<body class="dark">
 
-  <section class="grid">
-    <div class="card glass">
-      <h3>Memory Safety in Embedded Systems</h3>
-      <p>
-        Exploring secure design patterns and vulnerability mitigation.
-      </p>
-      <small>Graduate Research</small>
-    </div>
+  <button class="theme-toggle" id="theme-toggle">☾ / ☀</button>
 
-    <div class="card glass">
-      <h3>Threat Modeling for Autonomous Systems</h3>
-      <p>
-        Analyzing attack surfaces in drone and robotic systems.
-      </p>
-      <small>In Progress</small>
+  <main>
+    <a href="home.html" class="back-link">&larr; Back</a>
+    <h1>Research</h1>
+    <div class="liquid-bar"></div>
+
+    <div class="grid">
+
+      <div class="card glass">
+        <div class="card-icon">🧠</div>
+        <h3>Memory Safety in Embedded Systems</h3>
+        <p>Exploring secure design patterns and vulnerability mitigation in embedded firmware.</p>
+        <div class="tags"><span>Embedded</span><span>Graduate Research</span></div>
+      </div>
+
+      <div class="card glass">
+        <div class="card-icon">👁️</div>
+        <h3>Threat Modeling for Autonomous Systems</h3>
+        <p>Analyzing attack vectors and surface areas in drone and robotic platforms.</p>
+        <div class="tags"><span>In Progress</span><span>Drones</span></div>
+      </div>
+
+      <div class="card glass">
+        <div class="card-icon">📋</div>
+        <h3>Zero-Trust Architecture in Academia</h3>
+        <p>Survey of zero-trust implementations in university and research network environments.</p>
+        <div class="tags"><span>Survey</span><span>Networking</span></div>
+      </div>
+
     </div>
-  </section>
-</main>
+  </main>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

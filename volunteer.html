@@ -1,8 +1,84 @@
-<div class="transition-screen">
-  assets/drone.svg
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer | Shreyansh Narayan</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <style>
+    .drone-transition {
+      position: fixed;
+      inset: 0;
+      background: #0b0d10;
+      display: flex;
+      align-items: center;
+      z-index: 100;
+      animation: fadeOutOverlay 0.6s ease 2.2s forwards;
+    }
+    .drone {
+      font-size: 3rem;
+      position: absolute;
+      left: -80px;
+      animation: flyAcross 2s ease-in-out forwards;
+    }
+    @keyframes flyAcross {
+      from { transform: translateX(0); }
+      to   { transform: translateX(110vw); }
+    }
+    @keyframes fadeOutOverlay {
+      to { opacity: 0; pointer-events: none; }
+    }
+    .content-section {
+      opacity: 0;
+      animation: fadeInContent 0.8s ease 2.4s forwards;
+    }
+    @keyframes fadeInContent {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="dark">
 
-<main class="content hidden">
-  <h1>Volunteer Work</h1>
-  <p>Drones, RC aircraft, outreach, STEM education.</p>
-</main>
+  <button class="theme-toggle" id="theme-toggle">☾ / ☀</button>
+
+  <!-- Drone fly-across overlay -->
+  <div class="drone-transition">
+    <span class="drone">✈️</span>
+  </div>
+
+  <!-- Content fades in after drone -->
+  <main class="content-section">
+    <a href="home.html" class="back-link">&larr; Back</a>
+    <h1>Volunteer Work</h1>
+    <div class="liquid-bar"></div>
+
+    <div class="grid">
+
+      <div class="card glass">
+        <div class="card-icon">🤖</div>
+        <h3>Drone Outreach Program</h3>
+        <p>Organized community events introducing students to autonomous aerial systems and safety.</p>
+        <div class="tags"><span>Drones</span><span>Community</span></div>
+      </div>
+
+      <div class="card glass">
+        <div class="card-icon">✈️</div>
+        <h3>RC Aircraft Club</h3>
+        <p>Built and flew fixed-wing RC aircraft; contributed to club training and safety protocols.</p>
+        <div class="tags"><span>RC Aircraft</span><span>Engineering</span></div>
+      </div>
+
+      <div class="card glass">
+        <div class="card-icon">🌟</div>
+        <h3>STEM Education</h3>
+        <p>Mentored K-12 students in robotics and basic programming through STEM outreach programs.</p>
+        <div class="tags"><span>Education</span><span>Mentorship</span></div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

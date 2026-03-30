@@ -26,6 +26,21 @@ h1, h2, h3 {
   letter-spacing: -0.02em;
 }
 
+h1 { font-size: 2.6rem; margin-bottom: 0.3rem; }
+h2 { font-size: 1.7rem; margin: 2.5rem 0 1rem; }
+h3 { font-size: 1.1rem; margin: 0 0 0.4rem; }
+
+p { margin: 0 0 0.5rem; }
+
+.hero { margin-bottom: 3rem; }
+.hero h1 { font-size: 3rem; }
+
+.subtitle {
+  opacity: 0.6;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -41,4 +56,77 @@ h1, h2, h3 {
 
 .card:hover {
   transform: translateY(-4px);
+}
+
+.nav-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.tags span {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  opacity: 0.7;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.5;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+.back-link:hover { opacity: 1; }
+
+.liquid-bar {
+  height: 6px;
+  width: 80px;
+  border-radius: 10px;
+  margin: 1rem 0 2rem;
+  background: linear-gradient(90deg, #9ad7ff, #2563eb, #9ad7ff);
+  background-size: 200% 100%;
+  filter: blur(2px);
+  animation: liquid 2s infinite alternate ease-in-out;
+}
+
+@keyframes liquid {
+  from { background-position: 0% 50%; }
+  to   { background-position: 100% 50%; }
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: none;
+  border: 1px solid currentColor;
+  color: inherit;
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  z-index: 999;
+  transition: background 0.2s;
+}
+
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.1);
 }

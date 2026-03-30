@@ -1,22 +1,54 @@
-<main>
-  <h1>Projects</h1>
-  <div class="liquid-bar"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Shreyansh Narayan</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+</head>
+<body class="dark">
 
-  <section class="grid">
-    <div class="card glass">
-      <h3>Intrusion Detection System</h3>
-      <p>
-        Designed a lightweight IDS using anomaly detection and traffic profiling.
-      </p>
-      <small>Python · Networking</small>
-    </div>
+  <button class="theme-toggle" id="theme-toggle">☾ / ☀</button>
 
-    <div class="card glass">
-      <h3>Secure File Storage</h3>
-      <p>
-        Implemented encryption, key management, and access controls.
-      </p>
-      <small>Cryptography · Systems</small>
+  <main>
+    <a href="home.html" class="back-link">&larr; Back</a>
+    <h1>Projects</h1>
+    <div class="liquid-bar"></div>
+
+    <div class="grid">
+
+      <div class="card glass">
+        <div class="card-icon">🔓</div>
+        <h3>Intrusion Detection System</h3>
+        <p>Lightweight IDS using anomaly detection and traffic profiling on live network data.</p>
+        <div class="tags"><span>Python</span><span>Networking</span></div>
+      </div>
+
+      <div class="card glass">
+        <div class="card-icon">🔒</div>
+        <h3>Secure File Storage</h3>
+        <p>End-to-end encrypted file system with key management and fine-grained access controls.</p>
+        <div class="tags"><span>Cryptography</span><span>Systems</span></div>
+      </div>
+
+      <div class="card glass">
+        <div class="card-icon">🤖</div>
+        <h3>Autonomous Drone Security Analysis</h3>
+        <p>Threat modeling and attack surface evaluation for autonomous aerial vehicles.</p>
+        <div class="tags"><span>IoT</span><span>Embedded</span></div>
+      </div>
+
+      <div class="card glass">
+        <div class="card-icon">📊</div>
+        <h3>Network Traffic Classifier</h3>
+        <p>ML-based pipeline to classify benign vs. malicious traffic with high precision.</p>
+        <div class="tags"><span>ML</span><span>Security</span></div>
+      </div>
+
     </div>
-  </section>
-</main>
+  </main>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>
